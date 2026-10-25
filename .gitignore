@@ -1,0 +1,10 @@
+# Only the website goes in this repository.
+.DS_Store
+.claude/
+flat-calm-site.html
+font-options*.html
+font-finalists.html
+iterations/
+products/
+for-chatgpt/
+logo/index.html
