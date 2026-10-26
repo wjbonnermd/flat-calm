@@ -216,6 +216,44 @@ h3 { font-size: 1.2rem; }
 .footer-cols a:hover { color: var(--navy); }
 .copyright { grid-column: 1 / -1; border-top: 1px solid rgba(20,40,58,.1); padding-top: 1.5rem; font-size: .85rem; color: var(--muted); }
 
+/* Flat Calm scale */
+.scale { background: var(--navy); color: var(--sand); }
+.scale-inner { max-width: 1240px; margin: 0 auto; padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 5vw, 4rem); }
+.scale .eyebrow { color: var(--glass); }
+.scale .section-sub { color: rgba(244,237,226,.7); }
+.scale-labels, .scale-list li { display: grid; grid-template-columns: 120px 64px 96px 1fr 210px; gap: 1.5rem; align-items: center; }
+.scale-labels { padding-bottom: .8rem; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--glass); }
+.scale-list { list-style: none; border-top: 1px solid rgba(244,237,226,.15); }
+.scale-list li { padding: 1.2rem 0; border-bottom: 1px solid rgba(244,237,226,.15); }
+.wave { width: 120px; height: 28px; overflow: visible; }
+.wave path { fill: none; stroke: var(--glass); stroke-width: 1.6; stroke-linecap: round; }
+.force { font-family: var(--display); font-size: 2rem; line-height: 1; }
+.wind { font-size: .9rem; color: rgba(244,237,226,.7); white-space: nowrap; }
+.seen h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .16em; margin-bottom: .2rem; }
+.seen p { font-size: .9rem; color: rgba(244,237,226,.7); }
+.dad { font-family: var(--display); text-transform: uppercase; letter-spacing: .14em; font-size: .9rem; color: var(--sun); }
+.scale-note { margin-top: 1.5rem; font-size: .85rem; color: rgba(244,237,226,.6); max-width: 620px; }
+
+/* The Flat Calm Way */
+.rules { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.rules li { border-top: 1.5px solid var(--navy); padding-top: 1.25rem; }
+.rules .num { display: block; font-family: var(--display); color: var(--sea); letter-spacing: .14em; margin-bottom: .9rem; }
+.rules h3 { text-transform: uppercase; letter-spacing: .14em; font-size: 1.05rem; margin-bottom: .5rem; color: var(--navy); }
+.rules p { color: var(--muted); font-size: .95rem; }
+
+/* Journal stories */
+.posts { align-items: start; }
+.post details { margin-top: .9rem; }
+.post summary { cursor: pointer; font-weight: 600; font-size: .95rem; color: var(--sea); list-style: none; }
+.post summary::-webkit-details-marker { display: none; }
+.post summary::after { content: " →"; }
+.post details[open] summary::after { content: " ↑"; }
+.post summary:hover { color: var(--navy); }
+.post details > ol, .post details > ul { padding-left: 1.2rem; margin-top: .9rem; display: grid; gap: .6rem; }
+.post details li, .post details p { color: var(--muted); font-size: .95rem; }
+.post details > p { margin-top: .9rem; }
+.post details strong { color: var(--ink); font-weight: 600; }
+
 /* Responsive */
 @media (max-width: 1100px) and (min-width: 901px) {
   .products { grid-template-columns: repeat(3, 1fr); }
@@ -231,6 +269,14 @@ h3 { font-size: 1.2rem; }
   .product { scroll-snap-align: start; }
   .story { grid-template-columns: 1fr; }
   .footer { grid-template-columns: 1fr; }
+  .rules { grid-template-columns: repeat(2, 1fr); }
+  .scale-labels { display: none; }
+  .scale-list li { grid-template-columns: auto auto 1fr; grid-template-areas: "force wind wave" "seen seen seen" "dad dad dad"; gap: .6rem 1rem; }
+  .force { grid-area: force; }
+  .wind { grid-area: wind; }
+  .wave { grid-area: wave; justify-self: end; }
+  .seen { grid-area: seen; }
+  .dad { grid-area: dad; }
 }
 @media (max-width: 760px) {
   .menu-toggle { display: block; }
@@ -244,6 +290,7 @@ h3 { font-size: 1.2rem; }
   .tide-stats { grid-template-columns: repeat(2, 1fr); }
   .join-form { flex-direction: column; }
   .section-head.sub { margin-top: 3.5rem; }
+  .rules { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
