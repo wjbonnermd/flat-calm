@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="logo/flat-calm-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=photos">
+  <link rel="stylesheet" href="styles.css?v=soon">
 </head>
 <body>
 
@@ -191,12 +191,7 @@
       <p class="eyebrow">Join the Crew</p>
       <h2>Calm water, in your inbox.</h2>
       <p>New drops, tide notes, and the occasional fish story. No spam, ever.</p>
-      <form class="join-form" id="join-form">
-        <label for="email" class="sr-only">Email address</label>
-        <input id="email" type="email" placeholder="you@example.com" required>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-      </form>
-      <p class="join-msg" id="join-msg" role="status"></p>
+      <p class="join-soon">Signups coming soon</p>
     </div>
   </section>
 
@@ -229,13 +224,6 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('tide-date').textContent = new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
-
-    // Placeholder until a real email provider (Mailchimp, Klaviyo, etc.) is hooked up
-    document.getElementById('join-form').addEventListener('submit', e => {
-      e.preventDefault();
-      document.getElementById('join-msg').textContent = "You're on the list. See you at first light.";
-      e.target.reset();
-    });
 
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });

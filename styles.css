@@ -205,6 +205,7 @@ h3 { font-size: 1.2rem; }
 .join .btn-primary { background: var(--sand); color: var(--navy); }
 .join .btn-primary:hover { background: var(--glass); }
 .join-msg { min-height: 1.6em; color: var(--glass); opacity: 1 !important; }
+.join .join-soon { display: inline-block; margin-top: 2rem; padding: .85rem 1.6rem; border: 1px solid rgba(244,237,226,.35); border-radius: 999px; font-family: var(--display); font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; color: var(--glass); opacity: 1; }
 
 /* Footer */
 .footer { padding: 4rem clamp(1rem, 5vw, 4rem) 2rem; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; max-width: 1240px; margin: 0 auto; }
